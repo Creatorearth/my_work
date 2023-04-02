@@ -1,0 +1,51 @@
+<!doctype html>
+    <html lang="en">
+        <head>
+            <style>
+                @keyframes spin{
+                    100%{
+                        transform: rotate(360deg);
+                    }
+                    50%{
+                        transform: rotate(180deg);
+                    }
+                    0%{
+                        transform: rotate(0deg);
+                    }
+                }
+                .propeller-fan{
+                    background-color: #ff6d00;
+                    height: 35px;
+                    width: 35px;
+                    border-radius: 50%;
+                    margin: 90px;
+                    position: relative;
+                    transform-origin: center;
+                    animation: spin 0.2s linear infinite;
+                }
+                .propeller-fan::before{
+                    content: "";
+                    position: absolute;
+                    background-color: rgb(250, 244, 244);
+                    height: 80px;
+                    width: 40px;
+                    border-radius: 50% 50% 50% 50% / 85% 85% 15% 15%;
+                    top: 36px;
+                }
+                .propeller-fan::after{
+                    content: "";
+                    position: absolute;
+                    background-color: rgb(250, 244, 244);
+                    height: 80px;
+                    width: 40px;
+                    border-radius: 50% 50% 50% 50% / 15% 15% 85% 85%;
+                    top: -82px;
+                }
+                </style>
+                <title>studios</title>
+        </head>
+        <body>
+            <h1>propeller-fan animation</h1>
+            <div class="propeller-fan"></div>
+            </body>
+            </html>

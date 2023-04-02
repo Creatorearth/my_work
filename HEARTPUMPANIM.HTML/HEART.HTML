@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+               @keyframes pump{
+               0% {
+                   transform: scale(0.95);                  
+               }
+               5% { 
+                   transform: scale(1.1);
+               }
+               39% {
+                   transform: scale(0.85);
+               }
+               45% {
+                   transform: scale(1);
+               }
+               60% { 
+                   transform: scale(0.95);
+                }
+               100% { 
+                    transform: scale(0.9);
+                }
+            }
+            .heart { 
+                position: relative;
+                width: 100px;
+                height: 90px;
+                animation: pump 1s linear infinite;
+            }
+            .heart:before,
+            .heart:after { 
+                position: absolute;
+                content: "";
+                left: 50px;
+                top: 0;
+                width: 50px;
+                height: 80px;
+                background: #ff0000;
+                border-radius: 50px 50px 0 0;
+                transform: rotate(-45deg);
+                transform-origin: 0 100%;
+            }
+            .heart:after {
+                    left: 0;
+                    transform: rotate(45deg);
+                    transform-origin: 100% 100%;
+            }
+        </style>
+        <title>studios</title>
+    </head>
+    <body>
+        <h1>Heart Pump Animation</h1>
+        <div class="heart"></div>
+    </body>
+    </html>

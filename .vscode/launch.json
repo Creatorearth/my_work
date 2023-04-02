@@ -1,0 +1,208 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch Edge",
+      "request": "launch",
+      "type": "pwa-msedge",
+      "url": "http://localhost:8080",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "name": "Attach to Edge",
+      "port": 9222,
+      "request": "attach",
+      "type": "pwa-msedge",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Launch Chrome",
+      "url": "http://localhost:8080",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "name": "Launch Chrome",
+      "request": "launch",
+      "type": "pwa-chrome",
+      "url": "http://localhost:8080",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "type": "chrome",
+      "request": "attach",
+      "name": "Attach to Chrome",
+      "port": 9222,
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "name": "Attach to Chrome",
+      "port": 9222,
+      "request": "attach",
+      "type": "pwa-chrome",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "type": "java",
+      "name": "Launch External Terminal",
+      "request": "launch",
+      "console": "externalTerminal",
+      "mainClass": ""
+    },
+    
+    {
+      "type": "vscode-edge-devtools.debug",
+      "request": "attach",
+      "name": "Attach to Microsoft Edge and open the Edge DevTools",
+      "url": "http://localhost:8080",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "type": "vscode-edge-devtools.debug",
+      "request": "launch",
+      "name": "Launch Microsoft Edge and open the Edge DevTools",
+      "url": "http://localhost:8080",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "type": "chrome",
+      "request": "attach",
+      "name": "Attach to Chrome",
+      "port": 9222,
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "name": "Attach to Chrome",
+      "port": 9222,
+      "request": "attach",
+      "type": "pwa-chrome",
+      "webRoot": "${workspaceFolder}"
+    },
+    
+    {
+      "type": "java",
+      "name": "Launch with Arguments Prompt",
+      "request": "launch",
+      "mainClass": "",
+      "args": "${command:SpecifyProgramArgs}"
+    },
+    {
+      "type": "java",
+      "name": "Launch External Terminal",
+      "request": "launch",
+      "console": "externalTerminal",
+      "mainClass": ""
+    },
+    {
+      "type": "java",
+      "name": "Launch Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
+      "name": "Launch Java Program",
+      "request": "launch",
+      "mainClass": ""
+    },
+    {
+      "type": "java",
+      "name": "Attach to Remote Program",
+      "request": "attach",
+      "hostName": "<The host name or ip address of remote debuggee>",
+      "port": "<debug port of remote debuggee>"
+    },
+    {
+      "type": "java",
+      "request": "attach",
+      "name": "Attach by Process ID",
+      "processId": "${command:PickJavaProcess}"
+    },
+    {
+      "type": "java",
+      "name": "Attach",
+      "request": "attach",
+      "hostName": "localhost",
+      "port": "<debug port of the debuggee>"
+    },
+    {
+      "type": "java",
+      "name": "Launch myclass",
+      "request": "launch",
+      "mainClass": "myclass",
+      "projectName": "my_work_e74e8d2b"
+    },
+    {
+      "name": "(gdb) Attach",
+      "type": "cppdbg",
+      "request": "attach",
+      "program": "enter program name, for example ${workspaceFolder}/a.exe",
+      "processId": "${command:pickProcess}",
+      "MIMode": "gdb",
+      "miDebuggerPath": "/path/to/gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    },
+    {
+      "name": "Arduino",
+      "type": "arduino",
+      "request": "launch",
+      "program": "${file}",
+      "cwd": "${workspaceFolder}",
+      "MIMode": "gdb",
+      "targetArchitecture": "arm",
+      "miDebuggerPath": "",
+      "debugServerPath": "",
+      "debugServerArgs": "",
+      "customLaunchSetupCommands": [
+        {
+          "text": "target remote localhost:3333"
+        },
+        {
+          "text": "file \"${file}\""
+        },
+        {
+          "text": "load"
+        },
+        {
+          "text": "monitor reset halt"
+        },
+        {
+          "text": "monitor reset init"
+        }
+      ],
+      "stopAtEntry": true,
+      "serverStarted": "Info\\ :\\ [\\w\\d\\.]*:\\ hardware",
+      "launchCompleteCommand": "exec-continue",
+      "filterStderr": true,
+      "args": []
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "d:\\my_work",
+      "environment": [],
+      "program": "d:\\my_work\\build\\Debug\\outDebug",
+      "internalConsoleOptions": "openOnSessionStart",
+      "MIMode": "gdb",
+      "miDebuggerPath": "C:\\MinGW\\bin\\gdb.exe",
+      "externalConsole": false,
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
